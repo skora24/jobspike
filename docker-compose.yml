@@ -7,7 +7,7 @@ services:
     stop_grace_period: 30s
     environment:
       MYSQL_RANDOM_ROOT_PASSWORD: "true"
-      MYSQL_DATABASE: $DB_DATABASE
+      MYSQL_DATABASE: $DB_DATABASE 
       MYSQL_USER: $DB_USERNAME
       MYSQL_PASSWORD: $DB_PASSWORD
 #    volumes:
@@ -19,7 +19,7 @@ services:
     container_name: "${APP_NAME}_php"
     environment:
       PHP_SENDMAIL_PATH: /usr/sbin/sendmail -t -i -S mailhog:1025
-      DB_HOST: $DB_HOST
+      DB_HOST: $DB_HOST 
       DB_USER: $DB_USERNAME
       DB_PORT: $DB_PORT
       DB_PASSWORD: $DB_PASSWORD
